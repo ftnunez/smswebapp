@@ -1,0 +1,11 @@
+﻿D:\ASF\Repositorio\smswebapp\smswebapp.tests\GlobalUsings.cs
+D:\ASF\Repositorio\smswebapp\smswebapp.tests\smswebappunittest.cs
+C:\Users\ftnunez\.nuget\packages\microsoft.net.test.sdk\17.6.0\build\netcoreapp3.1\Microsoft.NET.Test.Sdk.Program.cs
+C:\Users\ftnunez\.nuget\packages\microsoft.testplatform.testhost\17.6.0\build\netcoreapp3.1\x64\testhost.exe
+C:\Users\ftnunez\.nuget\packages\microsoft.testplatform.testhost\17.6.0\build\netcoreapp3.1\x64\testhost.dll
+C:\Users\ftnunez\.nuget\packages\nunit3testadapter\4.2.1\build\netcoreapp2.1\NUnit3.TestAdapter.dll
+C:\Users\ftnunez\.nuget\packages\nunit3testadapter\4.2.1\build\netcoreapp2.1\NUnit3.TestAdapter.pdb
+C:\Users\ftnunez\.nuget\packages\nunit3testadapter\4.2.1\build\netcoreapp2.1\nunit.engine.dll
+C:\Users\ftnunez\.nuget\packages\nunit3testadapter\4.2.1\build\netcoreapp2.1\nunit.engine.api.dll
+C:\Users\ftnunez\.nuget\packages\nunit3testadapter\4.2.1\build\netcoreapp2.1\nunit.engine.core.dll
+C:\Users\ftnunez\.nuget\packages\nunit3testadapter\4.2.1\build\netcoreapp2.1\testcentric.engine.metadata.dll
