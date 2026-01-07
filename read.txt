@@ -2,3 +2,5 @@ https://www.youtube.com/watch?v=Vu_NCMfJFMU
 
 
 sqp_141d22a718a4c3320b329ca7ed85ddb08cfd2fac
+
+/d:sonar.host.url="http://localhost:9000"
