@@ -4,3 +4,19 @@ https://www.youtube.com/watch?v=Vu_NCMfJFMU
 sqp_141d22a718a4c3320b329ca7ed85ddb08cfd2fac
 
 /d:sonar.host.url="http://localhost:9000"
+
+bat "dotnet ${scannerHome}\\SonarScanner.MSBuild.dll begin /k:\"smsSonar\" /d:sonar.host.url=\"http://localhost:9000\" /
+d:sonar.token=\"sqp_141d22a718a4c3320b329ca7ed85ddb08cfd2fac\""
+
+scandotnetcorewithjenkins
+
+
+http://10.7.8.170:9000/api/project_badges/measure?project=scandotnetcorewithjenkins&metric=alert_status&token=sqb_32e0a8e69d822a8cbf18089c97bdc74ebfa0dfe2
+
+
+http://10.7.8.170:9000/api/project_badges/measure?project=scandotnetcorewithjenkins&metric=alert_status&token=sqb_32e0a8e69d822a8cbf18089c97bdc74ebfa0dfe2
+http://10.7.8.170:9000/dashboard?id=scandotnetcorewithjenkins
+
+
+***JENKINS_SERVER_URL***/job/***JENKINS_JOB_NAME***/build?token=***JENKINS_BUILD_TRIGGER_TOKEN***
+http://10.7.8.170:9000/job/scandotnetcorewithjenkins/build?token=sqb_32e0a8e69d822a8cbf18089c97bdc74ebfa0dfe2
