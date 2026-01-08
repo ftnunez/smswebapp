@@ -1,0 +1,59 @@
+pipeline {
+    agent {
+        label 'WindowsAgentMultiple'
+    }
+
+    stages {
+        stage('Checkout') {
+            steps {
+                checkout scm
+            }
+        }
+
+
+        stage('Build') {
+            steps {
+                script {
+                    // Restoring dependencies
+                    bat "dotnet restore"
+
+                    // Building the application
+                    bat "dotnet build --configuration Release"
+                }
+            }
+        }
+
+        
+
+        stage('Test') {
+            steps {
+                script {
+
+                    def scannerHome = tool 'SonarScanner for .NET'
+                    withSonarQubeEnv() {
+                      bat "dotnet ${scannerHome}\\SonarScanner.MSBuild.dll begin /k:\"smsSonar\" /d:sonar.host.url=\"http://10.7.8.170:9000\" /d:sonar.token=\"sqp_141d22a718a4c3320b329ca7ed85ddb08cfd2fac\""
+                      bat "dotnet build"
+                      bat "dotnet ${scannerHome}\\SonarScanner.MSBuild.dll end /d:sonar.token=\"sqp_141d22a718a4c3320b329ca7ed85ddb08cfd2fac\""
+                    }
+                    // Running tests
+                    bat "dotnet test --no-restore --configuration Release"
+                }
+            }
+        }
+
+        stage('Publish') {
+            steps {
+                script {
+                    // Publishing the application
+                    bat "dotnet publish --no-restore --configuration Release --output ./publish"
+                }
+            }
+        }
+    }
+
+    post {
+        success {
+            echo 'Build, test, and publish successful!'
+        }
+    }
+}
