@@ -3,7 +3,7 @@ node {
     label 'LinuxAgentMultiple'
   }
   tools {
-    git 'GitLinux' // Match the exact name defined in Global Tool Configuration
+    git 'GitLinux' // Match the name defined in Global Tool Configuration
   }
   stage('SCM') {
     checkout scm
